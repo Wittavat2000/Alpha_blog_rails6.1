@@ -1,0 +1,1 @@
+# Alpha_blog_rails6.1
