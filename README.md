@@ -1,7 +1,6 @@
 # README
 
-The front-end: Destroying (deleting) articles
+ DR code: Dont Repeat Yourself
 
-REST - Representational state transfer - mapping HTTP verbs (get, post, put, delete) to CRUD actions
-
-resources provides REST-ful routes to Rails resources
+-re-factoring
+- extract away the redundancies in code
