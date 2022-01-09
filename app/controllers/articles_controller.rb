@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 
     def show
         #byebug
-        # @article = Article.find(params[:id])
+        @article = Article.find(params[:id])
     end
 
     def index
@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 
     def edit
         #byebug
-        # @article = Article.find(params[:id])
+        @article = Article.find(params[:id])
     end
 
     def update
@@ -50,15 +50,16 @@ class ArticlesController < ApplicationController
         @article.destroy
         redirect_to articles_path
     end
+   
+   
     
     private
-
     def set_article
         @article = Article.find(params[:id])
     end
 
     def article_params
-        params.require(:article).permit(:title, :description)      
+      params.require(:article).permit(:title, :description)
     end
     
 
