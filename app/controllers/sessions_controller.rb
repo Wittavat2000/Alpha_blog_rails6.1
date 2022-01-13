@@ -10,8 +10,10 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             flash[:notice] = "Logged in successfully"
             redirect_to user
+             # Log the user in and redirect to the user's show page.
         else
-            flash.now[:alert] = "There was something wrong with your login details"
+             # Create an error message.
+            flash.now[:alert] = "There was something wrong with your login details" # Not quite right!
             render 'new'
         end
     end
