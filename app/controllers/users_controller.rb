@@ -15,8 +15,11 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       flash[:notice] = "Your account information was successfully updated"
       redirect_to @user
- 
-      
+    else
+      render 'edit'
+    end
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -27,6 +30,7 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
   private
   def user_params
     params.require(:user).permit(:username, :email, :password)
